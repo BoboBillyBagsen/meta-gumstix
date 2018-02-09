@@ -3,33 +3,6 @@ COMPATIBLE_MACHINE += "poblano|overo|duovero|pepper|"
 # Pull in the devicetree files into the rootfs
 RDEPENDS_kernel-base += "kernel-devicetree"
 
-KERNEL_DEVICETREE_overo = " \
-    omap3-overo-storm-tobi.dtb omap3-overo-tobi.dtb \
-    omap3-overo-storm-tobiduo.dtb omap3-overo-tobiduo.dtb \
-    omap3-overo-storm-chestnut43.dtb omap3-overo-chestnut43.dtb \
-    omap3-overo-storm-alto35.dtb omap3-overo-alto35.dtb \
-    omap3-overo-storm-arbor43c.dtb omap3-overo-arbor43c.dtb \
-    omap3-overo-storm-arbor43c1.dtb omap3-overo-arbor43c1.dtb \
-    omap3-overo-storm-arbor50c.dtb omap3-overo-arbor50c.dtb \
-    omap3-overo-storm-arbor70c.dtb omap3-overo-arbor70c.dtb \
-    omap3-overo-storm-gallop43.dtb omap3-overo-gallop43.dtb \
-    omap3-overo-storm-palo43.dtb omap3-overo-palo43.dtb \
-    omap3-overo-storm-palo35.dtb omap3-overo-palo35.dtb \
-    omap3-overo-storm-summit.dtb omap3-overo-summit.dtb \
-    omap3-overo-storm-swd-jtag.dtb \
-    omap3-overo-storm-thumbo.dtb omap3-overo-thumbo.dtb \
-"
-KERNEL_DEVICETREE_duovero = "omap4-duovero-parlor.dtb \
-                             omap4-duovero-garret50c.dtb \
-"
-KERNEL_DEVICETREE_pepper = "am335x-pepper.dtb \
-                            am335x-pepper-43r.dtb \
-                            am335x-pepper-43c.dtb \
-                            am335x-pepper-dvi.dtb \
-"
-
-KERNEL_DEVICETREE_poblano = "am437x-poblano.dtb"
-
 LINUX_VERSION_EXTENSION = "-custom"
 
 BOOT_SPLASH ?= "logo_linux_clut224-generic.ppm"
