@@ -11,6 +11,7 @@ SRC_URI = " \
     file://0007-Add-support-for-the-Atheros-AR8035-Gigabit-Ethernet.patch \
     file://0008-Revert-ti-armv7-enable-EXT-support-in-SPL-using-ti_a.patch \
     file://0009-Update-uboot-config-for-DuoVero.patch \
+    file://0001-omap3_overo-Update-name-of-Filesystem-MTD-partition.patch \
 "
 
 

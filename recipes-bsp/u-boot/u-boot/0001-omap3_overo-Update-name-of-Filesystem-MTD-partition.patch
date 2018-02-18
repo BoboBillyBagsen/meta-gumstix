@@ -1,0 +1,46 @@
+From 2970d93694f84ae8d8a40259b201a3d5d4715761 Mon Sep 17 00:00:00 2001
+From: Drew Moseley <drew.moseley@northern.tech>
+Date: Thu, 15 Feb 2018 17:59:32 -0500
+Subject: [PATCH 1/2] omap3_overo: Update name of Filesystem MTD partition.
+
+This is to sync up with the name expected by the kernel.
+
+Signed-off-by: Drew Moseley <drew.moseley@northern.tech>
+---
+ include/configs/omap3_overo.h | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/include/configs/omap3_overo.h b/include/configs/omap3_overo.h
+index 3b1e5d7ff8..f66a7b00b8 100644
+--- a/include/configs/omap3_overo.h
++++ b/include/configs/omap3_overo.h
+@@ -74,7 +74,7 @@
+  *  uboot               14 * NAND_BLOCK_SIZE = 1792 KiB
+  *  uboot environtment   2 * NAND_BLOCK_SIZE = 256 KiB
+  *  linux               64 * NAND_BLOCK_SIZE = 8 MiB
+- *  rootfs              remainder
++ *  Filesystem          remainder
+  */
+ #define MTDIDS_DEFAULT "nand0=omap2-nand.0"
+ #define MTDPARTS_DEFAULT "mtdparts=omap2-nand.0:"	\
+@@ -82,7 +82,7 @@
+ 	"1792k(u-boot),"				\
+ 	"256k(environ),"				\
+ 	"8m(linux),"					\
+-	"-(rootfs)"
++	"-(Filesystem)"
+ #else /* CONFIG_NAND */
+ #define MTDPARTS_DEFAULT
+ #endif /* CONFIG_NAND */
+@@ -148,7 +148,7 @@
+ 		"fi;\0" \
+ 	"nanddtsboot=echo Booting from nand with DTS...; " \
+ 		"run nandargs; " \
+-		"ubi part rootfs; "\
++		"ubi part Filesystem; "\
+ 		"ubifsmount ubi0:rootfs; "\
+ 		"run loadubifdt; "\
+ 		"run loadubizimage; "\
+-- 
+2.11.0
+
