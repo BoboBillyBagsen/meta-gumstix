@@ -13,18 +13,18 @@ Signed-off-by: Jerry Hung <jerry@gumstix.com>
  1 file changed, 3 insertions(+), 3 deletions(-)
 
 diff --git a/arch/arm/boot/dts/omap3-overo-base.dtsi b/arch/arm/boot/dts/omap3-overo-base.dtsi
-index bd22cdb..9322a2f 100644
+index 9c609a5..fe38fb8 100644
 --- a/arch/arm/boot/dts/omap3-overo-base.dtsi
 +++ b/arch/arm/boot/dts/omap3-overo-base.dtsi
-@@ -185,7 +185,6 @@
-         vin-supply = <&vbat>;
-         gpio = <&gpio6 4 GPIO_ACTIVE_HIGH>;	/* gpio_164: BT Enable */
-         startup-delay-us = <70000>;
--        enable-active-high;
+@@ -191,7 +191,6 @@
+ 	vin-supply = <&vbat>;
+ 	gpio = <&gpio6 4 GPIO_ACTIVE_HIGH>;	/* gpio_164: BT Enable */
+ 	startup-delay-us = <70000>;
+-	enable-active-high;
  };
  
  /* optional on board WiFi */
-@@ -194,8 +193,9 @@
+@@ -200,8 +199,9 @@
  	pinctrl-names = "default";
  	pinctrl-0 = <&mmc2_pins>;
  	ti,bus-width = <4>;
